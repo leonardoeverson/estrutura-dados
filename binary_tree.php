@@ -128,7 +128,7 @@ class BinaryTree
         $parent = $this->getParent($toRemove);
 
         if ($toRemove->left === null && $toRemove->right === null) {
-            if ($parent->data > $toRemove->data) {
+            if ($parent->data < $toRemove->data) {
                 $parent->right = null;
             } else {
                 $parent->left = null;
@@ -188,10 +188,13 @@ $bTree->add(9);
 $bTree->add(8);
 $bTree->add(12);
 $bTree->add(50);
-//$bTree->remove(1);
 $bTree->add(19);
 $bTree->add(122);
 $bTree->add(90);
 $bTree->add(503);
-$bTree->remove(10);
 $bTree->add(7);
+$bTree->add(600);
+$bTree->add(400);
+$bTree->remove(10);
+$bTree->remove(1);
+$bTree->remove(503);
